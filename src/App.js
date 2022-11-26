@@ -1,7 +1,9 @@
+import Logo from "./components/Logo";
+
 function App() {
   return (
     <div className="App">
-      <img className='logo' src='./assets/images/logo.svg' alt='logo'/>
+      <Logo/>
     </div>
   );
 }
