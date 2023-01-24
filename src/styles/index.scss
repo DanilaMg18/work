@@ -5,20 +5,163 @@ body {
 header {
   display: flex;
   height: 204px;
-  width: 1920px;
+  width: 100%;
 }
 
+.header_rightside_up {
+  display: flex;
+  padding: 46px 302px 35px 42px;
+}
 .header_lefside {
   display: flex;
   flex-direction: column;
   padding: 33px 488px 46px 300px;
+  width: 50%;
 }
 
-.LinkNav {
+.header_rightside {
+  width: 50%;
+}
+
+nav {
+  margin-top: 59px;
+}
+
+.LinkNav1, .LinkNav2, .LinkNav3, .LinkNav4 {
   text-decoration: none;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: 21px;
   color: #4F4F4F;
+}
+
+.LinkNav2, .LinkNav3 {
+  margin-right: 40px;
+}
+
+.navvector {
+  transform: translateX(7px) translateY(-2px);
+  margin-right: 40px;
+}
+
+.logo {
+  width: 244px;
+  height: 45px;
+}
+
+.telnumber {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  margin-left: 10px;
+  margin-right: 62px;
+}
+
+.inputheader {
+  width: 345px;
+  height: 54px;
+  background: #F2F2F2;
+  border: 1px solid #BDBDBD;
+  border-radius: 10px;
+}
+
+.vectorheaderrightside {
+  position: absolute;
+  top: 16px;
+  right: 331px;
+}
+
+.header_rightside_down {
+  position: relative;
+}
+
+
+.inputheader::placeholder {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #828282;
+  transform: translateX(20px);
+}
+
+.vectorheaderleftside {
+  margin-right: 26px;
+}
+
+main {
+  width: 100%;
+  height: 500px;
+}
+
+.likefooter {
+  width: 100%;
+  height: 359px;
+  background: #3ECF5E;
+}
+.likefooter_leftside {
+  width: 50%;
+  padding: 71px 300px 89px 300px;
+}
+
+.prefooter_rightside {
+  width: 50%;
+}
+
+.donate {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 43px;
+  color: #FFFFFF;
+}
+
+.checkboxandtexts {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.pcheckbox {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #FFFFFF;
+}
+
+.checkboxfooter {
+  width: 25px;
+  height: 25px;
+  background: #FFFFFF;
+  border-radius: 3px;
+}
+
+.inputfooter {
+  width: 234px;
+  height: 51px;
+  border: 1px solid #FFFFFF;
+  border-radius: 10px;
+  background: #3ECF5E;
+}
+
+.buttonfooter {
+  width: 222px;
+  height: 55px;
+  background: #FFFFFF;
+  border-radius: 10px;
+  border: 1px solid #FFFFFF;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21px;
+  color: #333333;
+}
+
+.inputandbutton {
+  display: flex;
+  margin-top: 32px;
+  gap: 20px;
 }
