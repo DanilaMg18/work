@@ -1,30 +1,33 @@
 body {
   background-color: rgb(255, 255, 255);
+  margin: 0 ;
 }
 
-header {
-  display: flex;
-  height: 204px;
-  width: 100%;
+header, main, footer {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  justify-content: space-between;
+
+  &.flex {
+    display: flex;
+  }
 }
 
 .header_rightside_up {
   display: flex;
-  padding: 46px 302px 35px 42px;
+    margin-left: 60px;
+    margin-top: 32px;
+    margin-bottom: 37px;
+
 }
 .header_lefside {
   display: flex;
   flex-direction: column;
-  padding: 33px 488px 46px 300px;
-  width: 50%;
-}
-
-.header_rightside {
-  width: 50%;
-}
-
-nav {
-  margin-top: 59px;
 }
 
 .LinkNav1, .LinkNav2, .LinkNav3, .LinkNav4 {
@@ -47,7 +50,8 @@ nav {
 
 .logo {
   width: 244px;
-  height: 45px;
+  margin-top: 33px;
+  margin-bottom: 60px;
 }
 
 .telnumber {
@@ -70,7 +74,7 @@ nav {
 .vectorheaderrightside {
   position: absolute;
   top: 16px;
-  right: 331px;
+  left: 299px;
 }
 
 .header_rightside_down {
@@ -92,22 +96,13 @@ nav {
 }
 
 main {
-  width: 100%;
-  height: 500px;
+  width: 1300px;
+  margin: 0 auto;
 }
 
 .likefooter {
-  width: 100%;
-  height: 359px;
+  max-width: 1920px;
   background: #3ECF5E;
-}
-.likefooter_leftside {
-  width: 50%;
-  padding: 71px 300px 89px 300px;
-}
-
-.prefooter_rightside {
-  width: 50%;
 }
 
 .donate {
@@ -116,12 +111,14 @@ main {
   font-size: 36px;
   line-height: 43px;
   color: #FFFFFF;
+  margin-top: 71px;
+  margin-bottom: 52px
 }
 
 .checkboxandtexts {
   display: flex;
   align-items: center;
-  margin-top: 50px;
+  margin-bottom: 32px;
 }
 
 .pcheckbox {
@@ -130,6 +127,8 @@ main {
   font-size: 18px;
   line-height: 21px;
   color: #FFFFFF;
+  margin-right: 70px;
+  margin-left: 10px;
 }
 
 .checkboxfooter {
@@ -162,6 +161,151 @@ main {
 
 .inputandbutton {
   display: flex;
-  margin-top: 32px;
+  margin-bottom: 89px;
   gap: 20px;
+}
+
+.container2 {
+  max-width: 1320px;
+  margin: 0 auto;
+  position: relative;
+
+  &.flex {
+    display: flex;
+  }
+}
+
+.footerimg {
+  width: 307px;
+  position: absolute;
+  height: 439px;
+  left: 857px;
+  bottom: 0px;
+}
+
+footer {
+  max-width: 1920px;
+  margin: 0 auto;
+  background-color: #333333;
+  display: flex;
+}
+
+.pfooter {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #FFFFFF;
+  margin-right: 50px;
+}
+
+.pfooter2 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #FFFFFF;
+}
+
+.container3 {
+  display: flex;
+  margin: 0 auto;
+  max-width: 1320px;
+  align-items: center;
+  margin-top: 100px;
+  margin-bottom: 130px;
+}
+
+.footersvg1 {
+  margin-right: 20px;
+  margin-left: 432px;
+}
+
+.footersvg2 {
+  margin-right: 468px;
+}
+
+.footersvg3 {
+  margin-right: 10px;
+}
+
+.footerphone {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #FFFFFF;
+}
+
+.card-wrapper {
+  display: flex;
+  gap: 20px;
+}
+
+.product-card {
+  width: 315px;
+  left: 1305px;
+  top: 852px;
+  background: #F9F9F9;
+  border: 1px solid #F2F2F2;
+  box-shadow: -8px -8px 15px #FFFFFF, 8px 8px 15px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+}
+
+.product-image {
+  padding: 20px 20px 25px 20px;
+}
+
+.card1image {
+  height: 227px;
+  width: 275px;
+  border-radius: 5px;
+  background: white;
+}
+
+.pcard1 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 130%;
+  color: #333333;
+  margin: 0px 20px 7px 20px;
+}
+
+.pdescription1 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  margin: 0px 107px 25px 20px;
+  color: #828282;
+}
+
+.pprice1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 27px;
+  color: #333333;
+  margin: 0px 197px 25px 20px;
+}
+
+.btn1, .btn2, .btn3, .btn4 {
+  width: 68px;
+  height: 29px;
+  border-radius: 5px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  border: none;
+  line-height: 21px;
+  background: #F9F9F9;
+}
+
+.product-weightbuttons {
+  margin-left: 20px;
+}
+
+.btn1:focus {
+  border: 1px solid #3ECF5E;
 }
