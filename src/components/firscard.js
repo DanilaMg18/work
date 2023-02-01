@@ -9,7 +9,12 @@ function MainCard1() {
 
   return(
     <div className='card-wrapper'>
-      {list}
+      <div className="card-wrapper-text">
+        <p className='wrapper-text1'>Готовые миксы</p>
+        <p className='wrapper-text2'>Ещё</p>
+        <img src="./assets/photos/green arrow.svg"/>
+      </div>
+      <div className="card-wrapper-cards">{list}</div>
     </div>
 )
 }

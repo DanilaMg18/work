@@ -239,7 +239,69 @@ footer {
 
 .card-wrapper {
   display: flex;
+  flex-direction: column;
+  margin-top: 75px;
+  margin-bottom: 152px;
+}
+
+.card-wrapper-cards {
+  display: flex;
   gap: 20px;
+}
+
+.product-button-more {
+  width: 161px;
+  background: #3FCF5E;
+  border: 1px solid rgba(5, 175, 52, 0.53);
+  border-radius: 10px;
+  margin-left: 20px;
+  margin-right: 68px;
+}
+
+.product-button-basket {
+  background: #FFFFFF;
+  border: 1px solid #BDBDBD;
+  border-radius: 10px;
+  width: 45px;
+  height: 45px;
+
+}
+
+.product-buttons {
+  display: flex;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.pmore {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21px;
+  color: #FFFFFF;
+  margin: 12px;
+}
+
+.card-wrapper-text {
+  display: flex;
+}
+
+.wrapper-text1 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #4F4F4F;
+  margin-right: 30px;
+}
+
+.wrapper-text2 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #219653;
+  margin-right: 7px;
 }
 
 .product-card {
@@ -290,7 +352,7 @@ footer {
   margin: 0px 197px 25px 20px;
 }
 
-.btn1, .btn2, .btn3, .btn4 {
+.weight-selection-btn {
   width: 68px;
   height: 29px;
   border-radius: 5px;
@@ -300,12 +362,130 @@ footer {
   border: none;
   line-height: 21px;
   background: #F9F9F9;
+
+  &.selected {
+    border: 1px solid #3ECF5E;
+  }
 }
 
 .product-weightbuttons {
   margin-left: 20px;
 }
 
-.btn1:focus {
-  border: 1px solid #3ECF5E;
+.login-container {
+  width: 650px;
+  background: #FFFFFF;
+  border: 1px solid #F2F2F2;
+  box-shadow: 0px 30px 50px 5px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+.plogin {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  color: #333333;
+  margin-left: 42px;
+  margin-right: 374px;
+}
+
+.login-inputs {
+  margin-left: 42px;
+}
+
+.login-input1 {
+  width: 566px;
+  height: 50px;
+  background: #F2F2F2;
+  border: 1px solid #BDBDBD;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.login-input2 {
+  width: 566px;
+  height: 50px;
+  background: #F2F2F2;
+  border: 1px solid #BDBDBD;
+  border-radius: 5px;
+}
+
+.login-header {
+  margin-top: 20px;
+  display: flex;
+}
+
+.login-input1::placeholder {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #828282;
+  position: absolute;
+  top: 15px;
+  left: 20px;
+}
+
+.login-input2::placeholder {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #828282;
+  position: absolute;
+  top: 15px;
+  left: 20px;
+}
+
+.login-btn2 {
+  width: 244px;
+  height: 49px;
+  background: #3FCF5E;
+  border-radius: 10px;
+  border: 1px solid #3FCF5E;
+}
+
+.login-btn1 {
+  width: 244px;
+  height: 49px;
+  background: #FFFFFF;
+  border-radius: 10px;
+  border: 1px solid #BDBDBD;
+  margin-right: 84px;
+}
+
+.plogin-button1 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #333333;
+}
+
+.plogin-button2 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.login-buttons {
+  margin-left: 42px;
+  margin-top: 45px;
+  margin-bottom: 50px;
+}
+
+.container4 {
+  margin-top: 145px;
+  margin-bottom: 248px;
+}
+
+.click-on-login {
+  cursor: pointer;
 }

@@ -1,7 +1,14 @@
 import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function Main() {
+  let navigate = useNavigate();
+
+  function navigateToLogin() {
+    navigate('/login')
+  }
+
   return (
     <div>
       <header>
@@ -21,7 +28,7 @@ function Main() {
                 <img src='./assets/photos/phone vector.svg'/>
                 <p className='telnumber'>8 920 999 43 50</p>
                 <img className='vectorheaderleftside' src='./assets/photos/Buy.svg'/>
-                <img src='./assets/photos/account.svg'/>
+                <img onClick={navigateToLogin} className='click-on-login' src='./assets/photos/account.svg'/>
               </div>
               <div className='header_rightside_down'>
                 <input className='inputheader' placeholder='Поиск'/>
