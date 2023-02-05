@@ -144,6 +144,17 @@ main {
   border: 1px solid #FFFFFF;
   border-radius: 10px;
   background: #3ECF5E;
+
+  &::placeholder {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #7EFF9A;
+  }
 }
 
 .buttonfooter {
@@ -157,6 +168,44 @@ main {
   font-size: 18px;
   line-height: 21px;
   color: #333333;
+}
+
+nav {
+  display: flex;
+}
+
+.firstLinks {
+  position: relative;
+}
+
+.subLinks {
+  display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    width: 254px;
+    background: #FFFFFF;
+    box-shadow: 0px 15px 30px 5px rgb(0 0 0 / 10%);
+    border-radius: 15px;
+    gap: 30px;
+}
+
+.link1, .link2, .link3, .link4, .link5 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #4F4F4F;
+  text-decoration: none;
+  margin-left: 25px;
+}
+
+.link1 {
+  margin-top: 20px;
+}
+
+.link5 {
+  margin-bottom: 30px;
 }
 
 .inputandbutton {
@@ -280,6 +329,7 @@ footer {
   line-height: 21px;
   color: #FFFFFF;
   margin: 12px;
+  cursor: pointer;
 }
 
 .card-wrapper-text {
@@ -316,6 +366,10 @@ footer {
 
 .product-image {
   padding: 20px 20px 25px 20px;
+}
+
+.loginback {
+  cursor: pointer;
 }
 
 .card1image {
@@ -365,6 +419,7 @@ footer {
 
   &.selected {
     border: 1px solid #3ECF5E;
+    background: white;
   }
 }
 
@@ -488,4 +543,332 @@ footer {
 
 .click-on-login {
   cursor: pointer;
+}
+
+.card2p {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #BDBDBD;
+}
+
+.card2p2 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #BDBDBD;
+}
+
+.goBack {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #333333;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.where-are-you {
+  display: flex;
+  gap: 15px;
+}
+
+.card-wrapper-cards2 {
+  display: grid;
+  grid-template-columns: repeat(4, 315px);
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.pages {
+    display: flex;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    gap: 30px;
+}
+
+.card-wrapper2 {
+  display: flex;
+  flex-direction: column;
+  margin-top: 75px;
+}
+
+.pages1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  color: #219653;
+}
+
+.pages2, .pages3 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #828282;
+}
+
+.pdescription2 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  margin: 0px 79px 25px 20px;
+  color: #828282;
+
+}
+
+.inner-card {
+  display: flex;
+}
+
+.p-inner-card1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 120%;
+  margin-right: 300px;
+  color: #333333;
+}
+
+.p-inner-description1 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  color: #4F4F4F;
+  margin-bottom: 65px;
+}
+
+.innerimage {
+  margin-top: 57px;
+}
+
+.p-inner-price1 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 130%;
+  color: #333333;
+}
+
+.inner-weightbuttons {
+  gap: 20px;
+  display: flex;
+}
+
+.p-quantity {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 130%;
+  color: #BDBDBD;
+}
+
+.btncounter {
+  background: #FFFFFF;
+  border: 1px solid #00C620;
+  border-radius: 5px;
+  width: 26px;
+  height: 26px;
+}
+
+.counter-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.pcounter {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  color: #4F4F4F;
+}
+
+.buybutton {
+  background: #3FCF5E;
+  border: 1px solid rgba(110, 230, 144, 0.53);
+  border-radius: 5px;
+  width: 122px;
+  height: 45px;
+  margin-right: 15px;
+
+}
+
+.buyp {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21px;
+  color: #FFFFFF;
+}
+
+.addbutton {
+  background: #FFFFFF;
+  border: 1px solid rgba(110, 230, 144, 0.53);
+  border-radius: 5px;
+  width: 232px;
+  height: 45px;
+
+}
+
+.addp {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21px;
+  color: #3FCF5E;
+}
+
+.container-inner {
+  display: flex;
+  gap: 20px;
+  margin-top: 50px;
+  margin-bottom: 219px;
+}
+
+.innerleft {
+  width: 650px;
+  background: #f8efef;
+  border: 1px solid #F2F2F2;
+  box-shadow: 0px 10px 30px 2px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+}
+
+.innerright {
+  width: 650px;
+  background: #f8efef;
+  border: 1px solid #F2F2F2;
+  box-shadow: 0px 10px 30px 2px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+}
+
+.container-inner-text {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21px;
+  color: #333333;
+  margin-left: 30px;
+}
+
+.vectors-and-imgs {
+  display: flex;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.imgleft {
+  margin-left: 30px;
+}
+
+.birdsnames {
+  display: flex;
+  gap: 66px;
+  margin-bottom: 30px;
+}
+
+.birdname1 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  color: #828282;
+  margin-left: 94px;
+}
+
+.birdname {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  color: #828282;
+}
+
+.seedsnames {
+  display: flex;
+  gap: 81px;
+  margin-bottom: 30px;
+}
+
+.seedname1 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  color: #828282;
+  margin-left: 94px;
+}
+
+.seedname {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  color: #828282;
+}
+
+.loginButton {
+  width: 244px;
+  height: 49px;
+  background: #3FCF5E;
+  border-radius: 10px;
+  border: 1px solid #3FCF5E;
+  margin-left: 20px;
+  margin-top: 25px;
+  cursor: pointer;
+}
+
+.loginLinks {
+  width: 284px;
+  height: 173px;
+  left: 1336px;
+  top: 102px;
+  background: #FFFFFF;
+  box-shadow: 0px 15px 30px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  position: absolute;
+  left: 900px;
+  display: flex;
+  flex-direction: column;
+}
+
+.registerButton {
+  width: 244px;
+  height: 49px;
+  background: #ffffff;
+  border-radius: 10px;
+  border: 1px solid #E5E5E5;
+  margin-left: 20px;
+  margin-top: 25px;
+}
+
+.p-go-login {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.p-go-register {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #000000;
 }

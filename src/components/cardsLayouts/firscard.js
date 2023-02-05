@@ -1,5 +1,5 @@
-import data from "../data"
-import Card from "./cards/cardmix"
+import { data } from "../../data"
+import Card from "../cards/cardmix"
 import React from "react"
 
 function MainCard1() {
