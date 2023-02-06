@@ -4,8 +4,8 @@ import React from "react"
 import { useNavigate } from "react-router-dom"
 
 function MainCard4() {
-  let list4 = data4.map(card => {
-      return <Card4 data4={card}/>
+  let list4 = data4.map((card, idx) => {
+      return <Card4 key={idx} data4={card}/>
   })
 
   let navigate = useNavigate();

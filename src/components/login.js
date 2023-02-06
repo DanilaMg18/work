@@ -7,6 +7,7 @@ export default function Login() {
     
 
     const users = useSelector((state) => state.users.loginUsers)
+    const admin = useSelector((state) => state.users.adminUser)
 
     let [data,setData] = useState({
         telnumber: '',
@@ -26,9 +27,12 @@ export default function Login() {
         if (data.telnumber === '' || data.password === '') {
           alert('Please Fill All The Fields')
         } else {
-          if (data.telnumber === users.telnumber && data.password === users.password) {
+          if (data.telnumber === users[0].telnumber && data.password === users[0].password) {
             goBack()
-          }else {
+          }else if(data.telnumber === admin[0].telnumber && data.password === admin[0].password) {
+            goBack()
+          }
+          else {
             alert ("Wrong Password")
           }
         }

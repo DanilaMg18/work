@@ -872,3 +872,61 @@ footer {
   text-align: center;
   color: #000000;
 }
+
+.container5 {
+  display: flex;
+  margin-top: 40px;
+  justify-content: space-around;
+  margin-bottom: 50px;
+}
+
+.admin-panel {
+  width: 180px;
+  background: #FFFFFF;
+  border: 1px solid #F2F2F2;
+  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+}
+
+.p-admin {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21px;
+  color: #333333;
+  margin: 40px 0px 40px 20px;
+}
+
+.my-orders {
+  width: 380px;
+  background: #FFFFFF;
+  border: 1px solid #F2F2F2;
+  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+}
+
+.orders {
+  margin-top: 20px;
+  margin-left: 20px;
+  background: #858585;
+  border: 1px solid #858585;
+  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  margin-left: 20px;
+}
+
+.order-block2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-order {
+  background: #3FCF5E;
+  border: 1px solid rgba(5, 175, 52, 0.53);
+  border-radius: 10px;
+}

@@ -15,8 +15,8 @@ export default function Register() {
     function saveLoginData(){
         const newID = users.length + 1
         dispatch({type: 'ADD_USER', payload: newUser, id: newID})
+        console.log(users)
     }
-
 
     function inputMemory(e) {
         setNewUser(prev => {
@@ -48,8 +48,8 @@ export default function Register() {
                 <img className='loginback' onClick={goBack} src='./assets/photos/rectangle.svg'/>
             </div>
             <div className='login-inputs'>
-                <input className='login-input1' placeholder='Телефон' onClick={(e) => {inputMemory(e)}}/>
-                <input className='login-input2' placeholder='Пароль' onClick={(e) => {inputMemory2(e)}}/>
+                <input className='login-input1' placeholder='Телефон' onChange={(e) => {inputMemory(e)}}/>
+                <input className='login-input2' placeholder='Пароль' onChange={(e) => {inputMemory2(e)}}/>
             </div>
             <div className='login-buttons'>
                 <button className='login-btn1' onClick={goToLogin}><p className='plogin-button1'>Войти в аккаунт</p></button>

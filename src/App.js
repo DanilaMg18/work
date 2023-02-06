@@ -10,6 +10,7 @@ import MainCard5 from "./components/cardsLayouts/fifthcard";
 import MainCard6 from "./components/cardsLayouts/sixthcard";
 import InnerCard from "./components/innerComponents/innerComp1";
 import Register from "./components/registerLayout";
+import Admin from "./components/adminLoyout";
 
 
 
@@ -27,6 +28,7 @@ function App() {
           <Route path="/fifthcard" element={<MainCard5/>}/>
           <Route path="/sixthcard" element={<MainCard6/>}/>
           <Route path="/innerCard" element={<InnerCard/>}/>
+          <Route path='/admin' element ={<Admin/>}/>
         </Route>
       </Routes>
     </div>

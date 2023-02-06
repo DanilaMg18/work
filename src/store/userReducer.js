@@ -4,7 +4,13 @@ const userDefaultState = {
         id: 1,
         telnumber: '862131602',
         password: '12345'
-    },]
+    },],
+
+    adminUser: [{
+        id: 1,
+        telnumber: 'admin',
+        password: 'admin'
+    }]
 }
 
 let ADD_USER = 'ADD_USER'
@@ -17,8 +23,4 @@ export const userReducer = (state = userDefaultState, action) => {
 
         default: return state
     }
-}
-
-export const addNewUser = (payload) => {
-    return {type: ADD_USER, payload}
 }

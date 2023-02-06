@@ -13,6 +13,10 @@ function Main() {
     navigate('/login')
   }
 
+  function navigateToAdmin() {
+    navigate('/admin')
+  }
+
   function navigateOnMain() {
     navigate('/')
   }
@@ -82,7 +86,7 @@ function Main() {
               <div className='header_rightside_up'>
                 <img src='./assets/photos/phone vector.svg'/>
                 <p className='telnumber'>8 920 999 43 50</p>
-                <img className='vectorheaderleftside' src='./assets/photos/Buy.svg'/>
+                <img className='vectorheaderleftside' src='./assets/photos/Buy.svg' onClick={navigateToAdmin}/>
                 <img onClick={clickHandler2} className='click-on-login' src='./assets/photos/account.svg'/>
                 {showLogin}
                 {!showLogin &&

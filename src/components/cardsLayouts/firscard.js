@@ -3,8 +3,8 @@ import Card from "../cards/cardmix"
 import React from "react"
 
 function MainCard1() {
-  let list = data.map(card => {
-      return <Card data={card}/>
+  let list = data.map((card, idx) => {
+      return <Card key={idx} data={card}/>
   })
 
   return(
