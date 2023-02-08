@@ -31,7 +31,7 @@ export default function Login() {
           if (data.telnumber === users[0].telnumber && data.password === users[0].password) {
             goBack()
           }else if(data.telnumber === admin[0].telnumber && data.password === admin[0].password) {
-            if(admin.status === true) {
+            if(admin[0].status === true) {
               setAdminStatus(true)
             }
           }
