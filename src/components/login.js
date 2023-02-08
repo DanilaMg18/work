@@ -8,6 +8,7 @@ export default function Login() {
 
     const users = useSelector((state) => state.users.loginUsers)
     const admin = useSelector((state) => state.users.adminUser)
+    let [adminStatus, setAdminStatus] = useState(false)
 
     let [data,setData] = useState({
         telnumber: '',
@@ -30,7 +31,9 @@ export default function Login() {
           if (data.telnumber === users[0].telnumber && data.password === users[0].password) {
             goBack()
           }else if(data.telnumber === admin[0].telnumber && data.password === admin[0].password) {
-            goBack()
+            if(admin.status === true) {
+              setAdminStatus(true)
+            }
           }
           else {
             alert ("Wrong Password")

@@ -9,12 +9,12 @@ const userDefaultState = {
     adminUser: [{
         id: 1,
         telnumber: 'admin',
-        password: 'admin'
+        password: 'admin',
+        status: true
     }]
 }
 
 let ADD_USER = 'ADD_USER'
-
 
 export const userReducer = (state = userDefaultState, action) => {
     switch (action.type) {

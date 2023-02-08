@@ -25,26 +25,6 @@ function Main() {
     navigate('/register')
   }
 
-  function navigateToCard2() {
-    navigate('/secondcard')
-  }
-
-  function navigateToCard3() {
-    navigate('/thirdcard')
-  }
-
-  function navigateToCard4() {
-    navigate('/fourthcard')
-  }
-
-  function navigateToCard5() {
-    navigate('/fifthcard')
-  }
-
-  function navigateToCard6() {
-    navigate('/sixthcard')
-  }
-
   function clickHandler(e) {
     e.preventDefault()
     setShowLink(!showLink)
@@ -70,11 +50,11 @@ function Main() {
                 {showLink}
                 {!showLink && 
                 <div className='subLinks'>
-                  <a className='link1' href='' onClick={navigateToCard6}>Готовые миксы</a>
-                  <a className='link2' href='' onClick={navigateToCard3}>Отдельные виды кормов</a>
-                  <a className='link3' href='' onClick={navigateToCard2}>Кормушки</a>
-                  <a className='link4' href='' onClick={navigateToCard4}>Готовые комплекты</a>
-                  <a className='link5' href='' onClick={navigateToCard5}>Аксессуары и другое</a>
+                  <Link className='link1' to='sixthcard'>Готовые миксы</Link>
+                  <Link className='link2' to='thirdcard'>Отдельные виды кормов</Link>
+                  <Link className='link3' to='secondcard'>Кормушки</Link>
+                  <Link className='link4' to='fourthcard'>Готовые комплекты</Link>
+                  <Link className='link5' to='fifthcard'>Аксессуары и другое</Link>
                 </div>}
               </div>
               <a href='' className='LinkNav2'>О проекте</a>
