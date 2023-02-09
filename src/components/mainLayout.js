@@ -6,14 +6,16 @@ function Main() {
 
   let [admin, setAdmin] = useState(false)
 
-  useEffect( async () => {
+  useEffect( () => {
     let Abc = async () => {
       await useLocation().state.isAdmin
      }
     if(Abc) {
       setAdmin(true)
+      console.log('I am Admin')
     } else {
       setAdmin(false)
+      console.log('I am not admin')
     }
   }, [])
 
@@ -74,7 +76,8 @@ function Main() {
               <a href='' className='LinkNav2'>О проекте</a>
               <a href='' className='LinkNav3'>Птицы</a>
               <a href=''className='LinkNav4'>Пожертвования</a>
-              {admin && <Link className='adminLink' to='fifthcard'>ADMIN</Link>}
+              {admin}
+              {!admin && <Link className='adminLink' to='fifthcard'>ADMIN</Link>}
             </nav>
           </div>
           <div className='header_rightside'>
