@@ -3,12 +3,11 @@ import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
 
-export default function Login() {
+export default function Login2() {
     
 
     const users = useSelector((state) => state.users.loginUsers)
     const admin = useSelector((state) => state.users.adminUser)
-    let [adminStatus, setAdminStatus] = useState(false)
 
     let [data,setData] = useState({
         telnumber: '',
@@ -29,11 +28,13 @@ export default function Login() {
           alert('Please Fill All The Fields')
         } else {
           if (data.telnumber === users[0].telnumber && data.password === users[0].password) {
-            goBack()
+            navigate('/', {state: {
+              isAdmin: false
+            }})
           }else if(data.telnumber === admin[0].telnumber && data.password === admin[0].password) {
-            if(admin[0].status === true) {
-              setAdminStatus(true)
-            }
+            navigate('/', {state: {
+              isAdmin: true
+            }})
           }
           else {
             alert ("Wrong Password")
@@ -49,6 +50,9 @@ export default function Login() {
 
     return(
     <div className='container4'>
+        <div className='logologin'>
+          <img src='./assets/photos/Logo.png'/>
+        </div>
         <div className='login-container'>
             <div className='login-header'>
                 <p className='plogin'>Вход в аккаунт</p>

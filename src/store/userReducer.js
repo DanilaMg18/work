@@ -10,7 +10,6 @@ const userDefaultState = {
         id: 1,
         telnumber: 'admin',
         password: 'admin',
-        status: true
     }]
 }
 

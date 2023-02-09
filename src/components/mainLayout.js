@@ -1,9 +1,23 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, Outlet } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
-import { useState } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 function Main() {
+
+  let [admin, setAdmin] = useState(false)
+
+  useEffect( async () => {
+    let Abc = async () => {
+      await useLocation().state.isAdmin
+     }
+    if(Abc) {
+      setAdmin(true)
+    } else {
+      setAdmin(false)
+    }
+  }, [])
+
+
   let navigate = useNavigate();
   let [showLink, setShowLink] = useState(true)
   let [showLogin, setShowLogin] = useState(true)
@@ -60,6 +74,7 @@ function Main() {
               <a href='' className='LinkNav2'>О проекте</a>
               <a href='' className='LinkNav3'>Птицы</a>
               <a href=''className='LinkNav4'>Пожертвования</a>
+              {admin && <Link className='adminLink' to='fifthcard'>ADMIN</Link>}
             </nav>
           </div>
           <div className='header_rightside'>

@@ -42,6 +42,9 @@ export default function Register() {
 
     return(
     <div className='container4'>
+        <div className='logologin'>
+          <img src='./assets/photos/Logo.png'/>
+        </div>
         <div className='login-container'>
             <div className='login-header'>
                 <p className='plogin'>Регистрация</p>
