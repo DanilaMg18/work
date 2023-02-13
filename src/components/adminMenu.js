@@ -21,9 +21,6 @@ export default function Admin() {
 
     return(
         <div className='container5'>
-            <div className="admin-panel">
-                <p className="p-admin" onClick={() => {navigate('/')}}>Ты в админ меню</p>
-            </div>
             <div className="my-orders">
                 <h1>Корзина</h1>
                 {orderList}

@@ -5,12 +5,10 @@ import { useNavigate, useLocation } from 'react-router-dom';
 function Main() {
 
   let [admin, setAdmin] = useState(false)
+  let isAdmin = useLocation().state
 
   useEffect( () => {
-    let Abc = async () => {
-      await useLocation().state.isAdmin
-     }
-    if(Abc) {
+    if(isAdmin) {
       setAdmin(true)
       console.log('I am Admin')
     } else {
@@ -73,11 +71,11 @@ function Main() {
                   <Link className='link5' to='fifthcard'>Аксессуары и другое</Link>
                 </div>}
               </div>
-              <a href='' className='LinkNav2'>О проекте</a>
-              <a href='' className='LinkNav3'>Птицы</a>
-              <a href=''className='LinkNav4'>Пожертвования</a>
-              {admin}
-              {!admin && <Link className='adminLink' to='fifthcard'>ADMIN</Link>}
+              <Link className='LinkNav2'>О проекте</Link>
+              <Link className='LinkNav3'>Птицы</Link>
+              <Link className='LinkNav4' to='donate'>Пожертвования</Link>
+              {!admin}
+              {admin && <Link className='adminLink' to='adminka'>ADMIN</Link>}
             </nav>
           </div>
           <div className='header_rightside'>
