@@ -34,11 +34,11 @@ export default function Adminka() {
 
 
 
-    const accountList = account.map((user, idx) => {
+    const AccountList = (props) => {
         return(
-            <div key={idx}>
+            <div>
                 <div className="img-and-spisok">
-                    <img className="editsvg" onClick={() => {editUser(user)}} src="./assets/photos/Edit.svg"/>
+                    <img className="editsvg" onClick={() => {editUser(props.user)}} src="./assets/photos/Edit.svg"/>
                     {!show}
                     {show && 
                     <div className="editPage">
@@ -56,12 +56,12 @@ export default function Adminka() {
                 </div>
                 <div className="data">
                     <p></p>
-                    <p>{user.telnumber}</p>
-                    <p>{user.password}</p>
+                    <p>{props.user.telnumber}</p>
+                    <p>{props.user.password}</p>
                 </div>
             </div>
         )
-    })
+    }
 
     function clickHandler() {
         setShow(!show)
@@ -78,7 +78,7 @@ export default function Adminka() {
                     <img src="./assets/photos/accountFoto.png"/>
                 </div>
                 <div className="adminPanelRight">
-                    {accountList}
+                    <AccountList user={account}/>
                 </div>
             </div>
         </div>

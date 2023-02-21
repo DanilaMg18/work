@@ -4,13 +4,13 @@ const userDefaultState = {
         id: 1,
         telnumber: '862131602',
         password: '12345'
-    },],
+    }],
 
-    adminUser: [{
+    adminUser: {
         id: 1,
         telnumber: 'admin',
         password: 'admin',
-    }],
+    },
     
     editUsers: {}
 }
@@ -28,7 +28,7 @@ export const userReducer = (state = userDefaultState, action) => {
             return {...state, editUsers: action.payload}
         
         case UPDATE_USER:
-            return {...state, adminUser: state.adminUser.map(user => {
+            return {...state, adminUser: state.adminUser = (user) => {
 
                 if(user.id === action.payload) {
                     const updatedUser = {
@@ -39,7 +39,7 @@ export const userReducer = (state = userDefaultState, action) => {
                     return updatedUser
                 }
                 return user
-            })}
+            }}
         default: return state
     }
 }

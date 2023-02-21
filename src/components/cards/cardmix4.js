@@ -13,7 +13,7 @@ function Card4(props) {
 
   function Memory() {
       setNewOrder(() => {
-        dispatch({type: 'ADD_ORDER', payload: {orderName: 'Корм для птиц RIO Линька', id: newID, price: '1000 руб'}})
+        dispatch({type: 'ADD_ORDER', payload: {orderName: 'Корм для птиц RIO Линька', id: newID, price: '1000 руб', img: './assets/photos/Card4Data.png'}})
       })
     }
 

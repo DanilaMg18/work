@@ -14,7 +14,7 @@ function Card(props) {
 
   function Memory() {
       setNewOrder(() => {
-        dispatch({type: 'ADD_ORDER', payload: {orderName: 'PADOVAN OVOMIX GOLD ROSSO', id: newID, price: '1000 руб'}})
+        dispatch({type: 'ADD_ORDER', payload: {orderName: 'PADOVAN OVOMIX GOLD ROSSO', id: newID, price: '1000 руб', img: './assets/photos/CardData1.png'}})
       })
     }
 
