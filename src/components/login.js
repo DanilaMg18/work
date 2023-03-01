@@ -31,7 +31,7 @@ export default function Login2() {
             navigate('/', {state: {
               isAdmin: false
             }})
-          }else if(data.telnumber === admin[0].telnumber && data.password === admin[0].password) {
+          }else if(data.telnumber === admin.telnumber && data.password === admin.password) {
             navigate('/', {state: {
               isAdmin: true
             }})

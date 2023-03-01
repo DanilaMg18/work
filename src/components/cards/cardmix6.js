@@ -1,11 +1,27 @@
 import React from 'react'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { useSelector, useDispatch } from 'react-redux'
+import { useEffect } from 'react'
 
 
 function Card6(props) {
     let [card,setCard] = useState(props.data6);
     let navigate = useNavigate();
+    const cart = useSelector((state) => state.orders.Allorders)
+    const [newOrder, setNewOrder] = useState(cart)
+    const dispatch = useDispatch()
+    const newID = cart.length + 1
+
+    function Memory() {
+        setNewOrder(() => {
+          dispatch({type: 'ADD_ORDER', payload: {orderName: 'PADOVAN OVOMIX GOLD ROSSO', id: newID, price: '1000 руб', img: './assets/photos/CardData1.png'}})
+        })
+      }
+
+      useEffect(() => {
+        console.log(newOrder)
+      }, [newOrder])
 
     function goToInner() {
         navigate('/innerCard')
@@ -42,7 +58,7 @@ function Card6(props) {
                 <div className='product-weightbuttons'>{buttonList}</div>
                 <div className='product-buttons'>
                     <button className='product-button-more' onClick={goToInner}><p className='pmore'>Подробнее</p></button>
-                    <button className='product-button-basket'><img src='./assets/photos/basket.svg'/></button>
+                    <button className='product-button-basket' onClick={Memory}><img src='./assets/photos/basket.svg'/></button>
                 </div>
             </div>
     )

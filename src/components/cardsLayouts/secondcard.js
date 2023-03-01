@@ -1,10 +1,12 @@
-import { data2 } from "../../data"
+import { useSelector } from "react-redux"
 import Card2 from "../cards/cardmix2"
 import React from "react"
 import { useNavigate } from "react-router-dom"
 
 function MainCard2() {
-  let list2 = data2.map((card, idx) => {
+    const card2Data = useSelector((state) => state.products.SecondCardData)
+
+  let list2 = card2Data.map((card, idx) => {
       return <Card2 key={idx} data2={card}/>
   })
 

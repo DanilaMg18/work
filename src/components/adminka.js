@@ -3,31 +3,30 @@ import { useDispatch } from "react-redux"
 import { useState, useEffect } from "react"
 
 export default function Adminka() {
-    const account = useSelector((state) => state.users.adminUser)
+    const kartochka1 = useSelector((state) => state.products.FirstCardData[0])
     const dispatch = useDispatch()
-    let [show,setShow] = useState(false)
 
-    const selectedUser = useSelector((state) => state.users.editUsers)
-    let [chosenUser,setChosenUser] = useState(selectedUser)
+    const selectedProduct = useSelector((state) => state.products.selectedProduct)
+    let [chosenProduct,setChosenProduct] = useState(selectedProduct)
 
     useEffect(() => {
-        console.log(1, chosenUser)
-    }, [chosenUser])
+        console.log(1, chosenProduct)
+    }, [chosenProduct])
 
     function changeTelNumber(e) {
-        setChosenUser(prev => {
-            return {...prev, telnumber: e.target.value}
+        setChosenProduct(prev => {
+            return {...prev, title: e.target.value}
         })
     }
 
     function changePassword(e) {
-        setChosenUser(prev => {
-            return {...prev, password: e.target.value}
+        setChosenProduct(prev => {
+            return {...prev, price: e.target.value}
         })
     }
 
     function saveChanges() {
-        dispatch({type: 'UPDATE_USER', payload: chosenUser})
+        dispatch({type: 'UPDATE_PRODUCT', payload: editProduct})
     }
 
 
@@ -37,48 +36,31 @@ export default function Adminka() {
     const AccountList = (props) => {
         return(
             <div>
-                <div className="img-and-spisok">
-                    <img className="editsvg" onClick={() => {editUser(props.user)}} src="./assets/photos/Edit.svg"/>
-                    {!show}
-                    {show && 
-                    <div className="editPage">
-                        <div className="editPagePandVector">
-                            <p className="pedit">Редактирование аккаунта</p>
-                            <img className="rectangleEdit" src="./assets/photos/rectangle.svg"/>
-                        </div>
-                        <div className="editPageInputs">
-                             <input className="editInput1" placeholder="Телефон" value={selectedUser.telnumber} onChange={(e) => {changeTelNumber(e)}}/>
-                            <input className="editInput2" placeholder="Пароль" value={selectedUser.password} onChange={(e) => {changePassword(e)}}/>
-                        </div>
-                        <button type="button" className="editBtnSave"><p className="pEditBtn" onClick={saveChanges}>Сохранить</p></button>
-                    </div>
-                        }
-                </div>
                 <div className="data">
-                    <p></p>
-                    <p>{props.user.telnumber}</p>
-                    <p>{props.user.password}</p>
+                    <p>{props.card1.title}</p>
+                    <p>{props.card1.price}</p>
+                </div>
+                <div>
+                    <button onClick={() => {editProduct(props.card1)}}>Edit</button>
                 </div>
             </div>
         )
     }
 
-    function clickHandler() {
-        setShow(!show)
-    }
-    function editUser(user) {
-        dispatch({type: 'EDIT_USER', payload: user})
-        clickHandler()
+    function editProduct(card1) {
+        dispatch({type: 'EDIT_PRODUCT', payload: card1})
     }
 
     return(
         <div className="container7">
             <div className="adminPanel">
-                <div className="adminPanelLeft">
-                    <img src="./assets/photos/accountFoto.png"/>
-                </div>
-                <div className="adminPanelRight">
-                    <AccountList user={account}/>
+                <AccountList card1={kartochka1}/>
+            </div>
+            <div className="adminInputs">
+                <div className="inputs-btn-admin">
+                    <input className="inputAdmin" type='text' value={selectedProduct.title} onChange={(e) => {changeTelNumber(e)}}/>
+                    <input type='text' value={selectedProduct.price} onChange={(e) => {changePassword(e)}}/>
+                    <button onClick={saveChanges}>Save</button>
                 </div>
             </div>
         </div>

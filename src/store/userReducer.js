@@ -17,7 +17,6 @@ const userDefaultState = {
 
 let ADD_USER = 'ADD_USER'
 let EDIT_USER = 'EDIT_USER'
-let UPDATE_USER = 'UPDATE_USER'
 
 export const userReducer = (state = userDefaultState, action) => {
     switch (action.type) {
@@ -27,19 +26,6 @@ export const userReducer = (state = userDefaultState, action) => {
         case EDIT_USER:
             return {...state, editUsers: action.payload}
         
-        case UPDATE_USER:
-            return {...state, adminUser: state.adminUser = (user) => {
-
-                if(user.id === action.payload) {
-                    const updatedUser = {
-                        id: user.id,
-                        telnumer: action.payload.telnumber,
-                        password: action.payload.password
-                    }
-                    return updatedUser
-                }
-                return user
-            }}
         default: return state
     }
 }

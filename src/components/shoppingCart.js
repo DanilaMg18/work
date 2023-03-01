@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom"
 import { deleteOrder } from "../store/cartReducer"
 
 
-export default function Admin() {
+export default function Cart() {
     const cart = useSelector((state) => state.orders.Allorders)
     const navigate = useNavigate()
     const dispatch = useDispatch()

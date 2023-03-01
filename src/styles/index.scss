@@ -880,14 +880,18 @@ footer {
   margin-bottom: 50px;
 }
 
-.admin-panel {
-  width: 180px;
-  max-height: 100px;
-  background: #FFFFFF;
-  border: 1px solid #F2F2F2;
-  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.05);
-  border-radius: 10px;
+.inputs-btn-admin {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-top: 30px;
+  gap: 5px;
 }
+
+.inputAdmin {
+  width: 300px;
+}
+
 
 .p-admin {
   font-style: normal;
@@ -1093,12 +1097,16 @@ h1 {
 }
 
 .container7 {
-  width: 429px;
   background: #FFFFFF;
   border: 1px solid #F2F2F2;
   box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
-  height: 500px;
+  display: flex;
+}
+
+.adminInputs {
+  margin: 0 auto;
+  height: 200px;
 }
 
 .editPage {
@@ -1112,7 +1120,8 @@ h1 {
 }
 
 .adminPanel {
-  display: flex;
+  width: 50%;
+  text-align: center;
 }
 
 .adminPanelLeft {

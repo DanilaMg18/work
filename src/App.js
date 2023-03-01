@@ -10,7 +10,7 @@ import MainCard5 from "./components/cardsLayouts/fifthcard";
 import MainCard6 from "./components/cardsLayouts/sixthcard";
 import InnerCard from "./components/innerComponents/innerComp1";
 import Register from "./components/register";
-import Admin from "./components/adminMenu";
+import Cart from "./components/shoppingCart";
 import Login2 from "./components/login";
 import Donate from "./components/donate";
 import Adminka from "./components/adminka";
@@ -35,7 +35,7 @@ function App() {
           <Route path="/fifthcard" element={<MainCard5/>}/>
           <Route path="/sixthcard" element={<MainCard6/>}/>
           <Route path="/innerCard" element={<InnerCard/>}/>
-          <Route path='/admin' element ={<Admin/>}/>
+          <Route path='/admin' element ={<Cart/>}/>
           <Route path='/donate' element={<Donate/>}/>
           <Route path="/adminka" element={<Adminka/>}/>
         </Route>
