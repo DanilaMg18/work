@@ -1205,6 +1205,20 @@ h1 {
   margin-bottom: 50px;
 }
 
+.AdminPanelButton {
+  width: 314px;
+  background: #f0f0f0;
+  border-radius: 10px;
+  border: 1px solid #f0f0f0;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.AdminPanelContainer {
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
 .pEditBtn {
   font-style: normal;
   font-weight: 600;

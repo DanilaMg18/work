@@ -28,6 +28,7 @@ const products = {
           ]
         }, 
         { 
+            id:2,
           img: './assets/photos/CardData1.png', 
           title: 'PADOVAN OVOMIX GOLD ROSSO', 
           description: 'Корм для птиц' ,
@@ -52,6 +53,7 @@ const products = {
           ]
         }, 
         { 
+            id:3,
           img: './assets/photos/CardData1.png', 
           title: 'PADOVAN OVOMIX GOLD ROSSO', 
           description: 'Корм для птиц',
@@ -76,6 +78,7 @@ const products = {
           ]
         }, 
         { 
+            id:4,
           img: './assets/photos/CardData1.png', 
           title: 'PADOVAN OVOMIX GOLD ROSSO', 
           description: 'Корм для птиц' ,
@@ -806,16 +809,9 @@ export const productsReducer = (state = products, action) => {
         case EDIT_PRODUCT:
             return {...state, selectedProduct: action.payload}
         case UPDATE_PRODUCT:
-            return {...state, FirstCardData: state.FirstCardData = (product) => {
-                if(product.id === action.payload) {
-                    const updatedProduct = {
-                        title: action.payload.title,
-                        price: action.payload.price
-                    }
-                    return updatedProduct
-                }
-                return product
-            }}
+           let arr = [...state.FirstCardData]
+           arr[action.payload.id - 1] = action.payload;
+           return{...state, FirstCardData: arr}
         default: return state
     }
 }
