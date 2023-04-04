@@ -1,5 +1,5 @@
 import { innerData } from "../../innerData"
-import InnerCardMix from "../innerCards/innerCard1"
+import InnerCardMix from "../ProductPages/productPage1"
 import React from "react"
 import { useNavigate } from "react-router-dom"
 

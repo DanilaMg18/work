@@ -1,13 +1,20 @@
 import { useSelector } from "react-redux"
-import Card2 from "../cards/cardmix2"
+import Card3 from "../Cards/productCard3"
 import React from "react"
 import { useNavigate } from "react-router-dom"
 
-function MainCard2() {
-    const card2Data = useSelector((state) => state.products.SecondCardData)
+function MainCard3() {
+    const card3Data = useSelector((state) => {
 
-  let list2 = card2Data.map((card, idx) => {
-      return <Card2 key={idx} data2={card}/>
+        let x = state.products.filter(card => {
+          return card.type === 'rioFood'
+        })
+    
+        return x
+      })
+
+  let list3 = card3Data.map((card, idx) => {
+      return <Card3 key={idx} data3={card}/>
   })
 
   let navigate = useNavigate();
@@ -16,18 +23,19 @@ function MainCard2() {
     navigate('/')
   }
 
+
   return(
     <div className='card-wrapper2'>
         <div className="where-are-you">
             <p className="card2p">Каталог</p>
             <img src="./assets/photos/circle.svg"/>
-            <p className="card2p2">Кормушки</p>
+            <p className="card2p2">Отдельные виды кормов</p>
         </div>
         <div className="card-wrapper-text">
             <img src="./assets/photos/Card2vectorback.svg"/>
             <p className="goBack" onClick={goBack}>Назад</p>
         </div>
-        <div className="card-wrapper-cards2">{list2}</div>
+        <div className="card-wrapper-cards2">{list3}</div>
         <div className="pages">
             <img src="./assets/photos/leftarrow.svg"/>
             <p className="pages1">1</p>
@@ -36,7 +44,8 @@ function MainCard2() {
             <img src="./assets/photos/rightarrow.svg"/>
         </div>
     </div>
+
 )
 }
 
-export default MainCard2;
+export default MainCard3;

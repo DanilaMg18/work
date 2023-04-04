@@ -1,19 +1,19 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import MainCard1 from "./components/cardsLayouts/firscard";
+import MainCard1 from "./components/CardsLayouts/firstCardPage";
 import Main from "./components/mainLayout";
 import LoginLayout from "./components/loginLayout";
-import MainCard2 from "./components/cardsLayouts/secondcard";
-import MainCard3 from "./components/cardsLayouts/thirdcard";
-import MainCard4 from "./components/cardsLayouts/fourthcard";
-import MainCard5 from "./components/cardsLayouts/fifthcard";
-import MainCard6 from "./components/cardsLayouts/sixthcard";
-import InnerCard from "./components/innerComponents/innerComp1";
-import Register from "./components/register";
+import MainCard2 from "./components/CardsLayouts/secondCardPage";
+import MainCard3 from "./components/CardsLayouts/thirdCardPage";
+import MainCard4 from "./components/CardsLayouts/fourthCardPage";
+import MainCard5 from "./components/CardsLayouts/fifthCardPage";
+import MainCard6 from "./components/CardsLayouts/sixthCardPage";
+import InnerCard from "./components/ProductPageCards/productPageCard1";
+import Register from "./components/LoginAndRegisterPanel/register";
 import Cart from "./components/shoppingCart";
-import Login2 from "./components/login";
+import Login2 from "./components/LoginAndRegisterPanel/login";
 import Donate from "./components/donate";
-import Adminka from "./components/adminka";
+import Adminka from "./components/adminPanel";
 
 
 
@@ -35,9 +35,9 @@ function App() {
           <Route path="/fifthcard" element={<MainCard5/>}/>
           <Route path="/sixthcard" element={<MainCard6/>}/>
           <Route path="/innerCard" element={<InnerCard/>}/>
-          <Route path='/admin' element ={<Cart/>}/>
+          <Route path='/shoppingCart' element={<Cart/>}/>
           <Route path='/donate' element={<Donate/>}/>
-          <Route path="/adminka" element={<Adminka/>}/>
+          <Route path="/admin" element={<Adminka/>}/>
         </Route>
       </Routes>
     </div>

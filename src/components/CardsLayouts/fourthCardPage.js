@@ -1,10 +1,17 @@
 import { useSelector } from "react-redux"
-import Card4 from "../cards/cardmix4"
+import Card4 from "../Cards/productCard4"
 import React from "react"
 import { useNavigate } from "react-router-dom"
 
 function MainCard4() {
-    const card4Data = useSelector((state) => state.products.FourthCardData)
+    const card4Data = useSelector((state) => {
+
+        let x = state.products.filter(card => {
+          return card.type === 'rioFood2'
+        })
+    
+        return x
+      })
 
   let list4 = card4Data.map((card, idx) => {
       return <Card4 key={idx} data4={card}/>

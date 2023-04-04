@@ -1,9 +1,16 @@
-import Card from "../cards/cardmix"
+import Card from "../Cards/productCard1"
 import React from "react"
 import { useSelector } from "react-redux"
 
 function MainCard1() {
-  const card1Data = useSelector((state) => state.products.FirstCardData)
+  const card1Data = useSelector((state) => {
+
+    let x = state.products.filter(card => {
+      return card.type === 'mixes'
+    })
+
+    return x
+  })
   
   let list = card1Data.map((card, idx) => {
       return <Card key={idx} data={card}/>

@@ -28,7 +28,7 @@ function Main() {
   }
 
   function navigateToAdmin() {
-    navigate('/admin')
+    navigate('/shoppingCart')
   }
 
   function navigateOnMain() {

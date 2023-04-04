@@ -1,13 +1,20 @@
 import { useSelector } from "react-redux"
-import Card5 from "../cards/cardmix5"
+import Card6 from "../Cards/productCard6"
 import React from "react"
 import { useNavigate } from "react-router-dom"
 
-function MainCard5() {
-    const card5Data = useSelector((state) => state.products.FifthCardData)
+function MainCard6() {
+    const card6Data = useSelector((state) => {
 
-  let list5 = card5Data.map((card, idx) => {
-      return <Card5 key={idx} data5={card}/>
+        let x = state.products.filter(card => {
+          return card.type === 'mixesHomePage'
+        })
+    
+        return x
+      })
+
+  let list6 = card6Data.map((card, idx) => {
+      return <Card6 key={idx} data6={card}/>
   })
 
   let navigate = useNavigate();
@@ -16,18 +23,19 @@ function MainCard5() {
     navigate('/')
   }
 
+
   return(
     <div className='card-wrapper2'>
         <div className="where-are-you">
             <p className="card2p">Каталог</p>
             <img src="./assets/photos/circle.svg"/>
-            <p className="card2p2">Аксессуары и другое</p>
+            <p className="card2p2">Готовые миксы</p>
         </div>
         <div className="card-wrapper-text">
             <img src="./assets/photos/Card2vectorback.svg"/>
             <p className="goBack" onClick={goBack}>Назад</p>
         </div>
-        <div className="card-wrapper-cards2">{list5}</div>
+        <div className="card-wrapper-cards2">{list6}</div>
         <div className="pages">
             <img src="./assets/photos/leftarrow.svg"/>
             <p className="pages1">1</p>
@@ -36,7 +44,8 @@ function MainCard5() {
             <img src="./assets/photos/rightarrow.svg"/>
         </div>
     </div>
+
 )
 }
 
-export default MainCard5;
+export default MainCard6;
